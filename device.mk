@@ -15,12 +15,12 @@
 #
 
 ## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/d2tmo/d2tmo-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/apexqtmo/apexqtmo-vendor.mk)
 
 ## overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/d2tmo/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/apexqtmo/overlay
 
-# Inherit from d2-common
-$(call inherit-product, device/samsung/d2-common/d2-common.mk)
+# Inherit from apexq-common
+$(call inherit-product, device/samsung/apexq-common/apexq-common.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/d2tmo/d2tmo-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/apexqtmo/apexqtmo-vendor.mk)

@@ -20,18 +20,18 @@
 # definition file).
 #
 
-# inherit from common D2
--include device/samsung/d2-common/BoardConfigCommon.mk
+# inherit from common APEXQ
+-include device/samsung/apexq-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/samsung/d2tmo/BoardConfigVendor.mk
+-include vendor/samsung/apexqtmo/BoardConfigVendor.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := d2tmo
+TARGET_OTA_ASSERT_DEVICE := apexqtmo
 
 # Kernel
-TARGET_KERNEL_SOURCE        := kernel/samsung/d2
-TARGET_KERNEL_CONFIG        := cyanogen_d2_defconfig
+TARGET_KERNEL_SOURCE        := kernel/samsung/apexq
+TARGET_KERNEL_CONFIG        := cyanogen_apexq_defconfig
 BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom user_debug=31
 BOARD_KERNEL_BASE           := 0x80200000
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81500000

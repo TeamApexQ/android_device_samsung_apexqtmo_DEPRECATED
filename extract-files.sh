@@ -18,7 +18,7 @@ else
   fi
 fi
 
-BASE=../../../vendor/samsung/d2tmo/proprietary
+BASE=../../../vendor/samsung/apexqtmo/proprietary
 rm -rf $BASE/*
 
 for FILE in `egrep -v '(^#|^$)' device-proprietary-files.txt`; do
@@ -34,7 +34,7 @@ for FILE in `egrep -v '(^#|^$)' device-proprietary-files.txt`; do
   fi
 done
 
-for FILE in `egrep -v '(^#|^$)' ../d2-common/common-proprietary-files.txt`; do
+for FILE in `egrep -v '(^#|^$)' ../apexq-common/common-proprietary-files.txt`; do
   echo "Extracting /system/$FILE ..."
   DIR=`dirname $FILE`
   if [ ! -d $BASE/$DIR ]; then

@@ -4,12 +4,12 @@
     "target_path": "device/samsung/msm8960-common"
   },
   {
-    "repository": "android_device_samsung_d2-common",
-    "target_path": "device/samsung/d2-common"
+    "repository": "android_device_samsung_apexq-common",
+    "target_path": "device/samsung/apexq-common"
   },
   {
-    "repository": "android_kernel_samsung_d2",
-    "target_path": "kernel/samsung/d2"
+    "repository": "android_kernel_samsung_apexq",
+    "target_path": "kernel/samsung/apexq"
   }
 ]
 
