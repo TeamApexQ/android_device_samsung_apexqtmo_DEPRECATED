@@ -1,5 +1,4 @@
-# FIXME: pull from stock props
-# system.prop for SGH-T999
+# system.prop for SGH-T699
 #
 
 rild.libpath=/system/lib/libril-qc-qmi-1.so
@@ -24,6 +23,7 @@ media.stagefright.enable-fma2dp=false
 media.stagefright.enable-aac=true
 media.stagefright.enable-qcp=true
 
+# these were both true in stock
 lpa.decode=false
 lpa.use-stagefright=false
 
@@ -64,7 +64,7 @@ ro.ril.transmitpower=true
 #
 ro.telephony.call_ring.multiple=0
 
-ro.sf.lcd_density=320
+ro.sf.lcd_density=240
 
 #system prop for switching gps driver to qmi
 persist.gps.qmienabled=true
@@ -72,6 +72,7 @@ persist.gps.qmienabled=true
 # Fields for custom RIL
 # MAX PROP NAME is 31 chars --|
 ro.telephony.ril_class=SamsungQualcommD2RIL
+# TODO FO if this is right for this board
 telephony.lteOnGsmDevice=1
 
 # Property to allow IccCard to properly handle APPSTATE_SUBSCRIPTION_PERSO
@@ -93,4 +94,60 @@ ro.sf.compbypass.enable=1
 com.qc.hdmi_out=true
 ro.hdmi.enable=true
 debug.sf.hw=1
+# from stock rom
+## note: also listed as perf upgrade in CM10 http://forum.xda-developers.com/showthread.php?t=1904827
+debug.egl.hw=1
+#
 debug.composition.type=dyn
+
+## from stock ROM, TBD whether to keep
+#TODO FO WTF these do?
+#DEVICE_PROVISIONED=1
+#dev.sfbootcomplete=0
+
+##NOTE: might be related to symlink to /persist firmware
+#camera changes..r.mewar
+persist.sys.camera.connect=0
+persist.sys.camera.transform=0
+persist.sys.storage_preload=1
+# 
+# system prop for Bluetooth Dialup Networking (from stock)
+#
+ro.qualcomm.bluetooth.dun=false
+
+# system prop for Bluetooth FTP profile
+ro.qualcomm.bluetooth.ftp=false
+#
+# system property for Bluetooth Handsfree Profile Wide Band Speech
+#
+ro.qualcomm.bluetooth.hfp.wbs=false
+#
+#system prop for Bluetooth hci transport
+ro.qualcomm.bt.hci_transport=smd
+#
+# system prop for requesting Master role in incoming Bluetooth connection.
+#
+ro.bluetooth.request.master=true                                                
+#
+# system prop for Bluetooth Auto connect for remote initated connections
+#
+ro.bluetooth.remote.autoconnect=true
+# system property for Bluetooth discoverability time out in seconds
+# 0: Always discoverable
+#debug.bt.discoverable_time=0
+
+
+# from stock "ADDITIONAL_BUILD_PROPERTIES"
+
+# System property for cabl               
+## FO What Cabl is
+ro.qualcomm.cabl=0
+
+ro.ril.gprsclass=10
+ro.ril.hsxpa=1
+
+#-ro.vendor.extension_library=/system/lib/libqc-opt.so
+
+#ro.yas-selftest.enable=true                                                     
+#ro.yas_softiron.apexqtmo=true
+
