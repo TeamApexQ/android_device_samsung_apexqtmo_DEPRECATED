@@ -20,15 +20,15 @@
 # definition file).
 #
 
-# inherit from common D2
--include device/samsung/d2-common/BoardConfigCommon.mk
+# inherit from common APEXQ
+-include device/samsung/apexq-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/samsung/d2tmo/BoardConfigVendor.mk
+-include vendor/samsung/apexqtmo/BoardConfigVendor.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := d2tmo
+TARGET_OTA_ASSERT_DEVICE := apexqtmo
 
 # Kernel
-TARGET_KERNEL_CONFIG        := cyanogen_d2_defconfig
+TARGET_KERNEL_CONFIG        := cyanogen_apexq_defconfig
 

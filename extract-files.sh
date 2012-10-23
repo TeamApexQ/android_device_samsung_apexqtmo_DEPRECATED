@@ -2,6 +2,6 @@
 
 set -e
 
-export DEVICE=d2tmo
+export DEVICE=apexqtmo
 export VENDOR=samsung
-./../d2-common/extract-files.sh
+./../apexq-common/extract-files.sh $@
