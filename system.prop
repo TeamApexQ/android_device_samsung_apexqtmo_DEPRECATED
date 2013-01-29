@@ -151,5 +151,5 @@ ro.ril.hsxpa=1
 #-ro.vendor.extension_library=/system/lib/libqc-opt.so
 
 #ro.yas-selftest.enable=true                                                     
-#ro.yas_softiron.apexqtmo=true
+ro.yas_softiron.apexqtmo=true
 
