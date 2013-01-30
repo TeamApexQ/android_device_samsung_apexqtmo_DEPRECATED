@@ -20,7 +20,7 @@
 # definition file).
 #
 
-# inherit from common APEXQ
+# inherit from common ApexQ
 -include device/samsung/apexq-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
@@ -30,17 +30,4 @@
 TARGET_OTA_ASSERT_DEVICE := apexqtmo
 
 # Kernel
-TARGET_KERNEL_SOURCE        := kernel/samsung/apexq
 TARGET_KERNEL_CONFIG        := cyanogen_apexq_defconfig
-BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom user_debug=31
-BOARD_KERNEL_BASE           := 0x80200000
-BOARD_FORCE_RAMDISK_ADDRESS := 0x81500000
-BOARD_KERNEL_PAGESIZE       := 2048
-
-TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00A00000
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00A00000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1572864000
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 28651290624
-BOARD_FLASH_BLOCK_SIZE := 131072
-

@@ -17,10 +17,9 @@
 ## (2) Also get non-open-source specific aspects if available
 $(call inherit-product-if-exists, vendor/samsung/apexqtmo/apexqtmo-vendor.mk)
 
-## overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/apexqtmo/overlay
+## common overlays
+DEVICE_PACKAGE_OVERLAYS += device/samsung/apexq-common/overlay-gsm
+
 
 # Inherit from apexq-common
 $(call inherit-product, device/samsung/apexq-common/apexq-common.mk)
-
-$(call inherit-product-if-exists, vendor/samsung/apexqtmo/apexqtmo-vendor.mk)
