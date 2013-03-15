@@ -84,6 +84,10 @@ BOARD_HAVE_AUDIENCE_A2220 := false
 # Use USB Dock Audio
 BOARD_HAVE_DOCK_USBAUDIO := true
 
+# Judging by pcm buffer sizes, this *should* be true
+BOARD_HAVE_LOW_LATENCY_AUDIO := true
+
+
 # Wifi
 WIFI_BAND := 802_11_ABG
 WPA_SUPPLICANT_VERSION := VER_0_8_X
