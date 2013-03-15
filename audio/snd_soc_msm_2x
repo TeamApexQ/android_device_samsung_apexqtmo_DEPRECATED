@@ -1221,7 +1221,7 @@ EndSection
 }
 
 SectionDevice
-	Name "Handset"
+	Name "Earpiece"
 	Comment "Handset Rx device"
 
 	EnableSequence
