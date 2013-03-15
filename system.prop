@@ -44,10 +44,10 @@ ro.emmc.sdcard.partition=17
 persist.timed.enable=true
 
 # System props for audio
-persist.audio.vr.enable=false
-persist.audio.handset.mic=digital
-persist.audio.speaker.location=high
-#persist.audio.fluence.mode=endfire # no dual mic, no fluence
+# persist.audio.vr.enable=false # we do not use audio-caf, not used.
+persist.audio.handset.mic=analog
+# persist.audio.speaker.location=high # not used anywhere
+# persist.audio.fluence.mode=endfire # no dual mic, no fluence
 
 #
 # system prop for opengles version
