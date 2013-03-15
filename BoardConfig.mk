@@ -76,7 +76,8 @@ TARGET_PROVIDES_LIBAUDIO := true
 TARGET_QCOM_AUDIO_VARIANT := caf
 # do not use FLUENCE
 BOARD_USES_FLUENCE_INCALL := false
-
+# wcd9310 does not like 44.1khz
+ALSA_DEFAULT_SAMPLE_RATE := 48000
 
 # Do not use Audience A2220 chip, we don't have it 
 BOARD_HAVE_AUDIENCE_A2220 := false
