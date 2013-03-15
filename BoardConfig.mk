@@ -86,7 +86,8 @@ BOARD_HAVE_AUDIENCE_A2220 := false
 BOARD_HAVE_DOCK_USBAUDIO := true
 
 # Judging by pcm buffer sizes, this *should* be true
-BOARD_HAVE_LOW_LATENCY_AUDIO := true
+# but might not be for caf
+BOARD_HAVE_LOW_LATENCY_AUDIO := false
 
 
 # Wifi
