@@ -88,6 +88,8 @@ BOARD_HAVE_DOCK_USBAUDIO := true
 # Judging by pcm buffer sizes, this *should* be true
 # but might not be for caf
 BOARD_HAVE_LOW_LATENCY_AUDIO := false
+# and then we will need to set this to false too:
+TARGET_USES_QCOM_COMPRESSED_AUDIO := false
 
 
 # Wifi
