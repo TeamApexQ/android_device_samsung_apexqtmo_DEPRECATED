@@ -74,6 +74,9 @@ BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true
 TARGET_PROVIDES_LIBAUDIO := true
 # do not use code aurora qcom audio
 TARGET_QCOM_AUDIO_VARIANT := 
+# do not use FLUENCE
+BOARD_USES_FLUENCE_INCALL := false
+
 
 # Use Audience A2220 chip
 BOARD_HAVE_AUDIENCE_A2220 := true
