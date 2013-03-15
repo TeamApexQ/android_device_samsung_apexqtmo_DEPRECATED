@@ -78,8 +78,8 @@ TARGET_QCOM_AUDIO_VARIANT :=
 BOARD_USES_FLUENCE_INCALL := false
 
 
-# Use Audience A2220 chip
-BOARD_HAVE_AUDIENCE_A2220 := true
+# Do not use Audience A2220 chip, we don't have it 
+BOARD_HAVE_AUDIENCE_A2220 := false
 
 # Use USB Dock Audio
 BOARD_HAVE_DOCK_USBAUDIO := true
