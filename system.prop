@@ -26,8 +26,9 @@ media.stagefright.enable-qcp=true
 
 # these were both true in stock
 # but this is still horribly broken in msm8960
-lpa.decode=false
-lpa.use-stagefright=false
+# yet we might need it to get tunnel and a2dp working
+lpa.decode=true
+lpa.use-stagefright=true
 
 #
 # system props for the data modules
