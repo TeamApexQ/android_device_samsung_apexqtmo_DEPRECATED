@@ -333,6 +333,27 @@ SectionVerb
 EndSection
 
 SectionVerb
+	Name "Voice Call IP"
+
+	EnableSequence
+		'SLIM_0_RX_Voice Mixer CSVoice':1:1
+		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
+	EndSequence
+
+	DisableSequence
+		'LINEOUT2 Volume':1:0
+		'LINEOUT4 Volume':1:0
+		'SLIM_0_RX_Voice Mixer CSVoice':1:0
+		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 2
+	CapturePCM 2
+
+EndSection
+
+SectionVerb
 	Name "Voice CallBT Headset"
 
 	EnableSequence
@@ -1244,13 +1265,13 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Handset Extra Vol"
+	Name "Voice Earpiece Extra Gain"
 	Comment "Handset Extra Vol Rx device"
 
 	EnableSequence
 		'SLIM_0_RX Channels':0:One
 		'RX1 MIX1 INP1':0:RX1
-		'EAR PA Gain':0:POS_2_DB
+		'EAR PA Gain':0:POS_6_DB
 		'DAC1 Switch':1:1
 		'RX1 Digital Volume':2:69.3%
 	EndSequence
@@ -1267,7 +1288,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Main Mic"
+	Name "Handset"
 	Comment "Main Mic Tx device"
 
 	EnableSequence
@@ -1287,7 +1308,7 @@ SectionDevice
 		'MICBIAS1 CAPLESS Switch':1:0
 	EndSequence
 
-	ACDBID	54:2
+	ACDBID	4:2
 
 EndSection
 
@@ -1392,7 +1413,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Headset"
+	Name "Headphones"
 	Comment "Headset Rx device"
 
 	EnableSequence
@@ -1446,30 +1467,37 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "BT Headset"
+	Name "BT SCO Rx"
 	Comment "BT Headset Rx device"
 
 	EnableSequence
+		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:1
 	EndSequence
 
 	DisableSequence
+		'INTERNAL_BT_SCO_RX_Voice Mixer CSVoice':1:0
 	EndSequence
 
-	ACDBID	48:1
+	PlaybackPCM 10
+	ACDBID	46:1
 
 EndSection
 
 SectionDevice
-	Name "BT Mic"
+	Name "BT SCO Tx"
 	Comment "BT Mic Tx device"
 
 	EnableSequence
+	        'Internal BTSCO SampleRate':0:16000
+		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:1
 	EndSequence
 
 	DisableSequence
+		'Voice_Tx Mixer INTERNAL_BT_SCO_TX_Voice':1:0
 	EndSequence
 
-	ACDBID	49:2
+	capturePCM 10
+	ACDBID	47:2
 
 EndSection
 
@@ -2008,7 +2036,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Call Headset"
+	Name "Voice Headphones"
 	Comment "Call Headset Rx device"
 
 	EnableSequence
@@ -2039,7 +2067,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Call Speaker"
+	Name "Voice Speaker"
 	Comment "Call Speaker Rx device"
 
 	EnableSequence
@@ -2065,7 +2093,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Call Speaker Extra Vol"
+	Name "Voice Speaker Extra Vol"
 	Comment "Call Speaker Extra Vol Rx device"
 
 	EnableSequence
@@ -2091,7 +2119,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Call Headset Mic"
+	Name "Headset"
 	Comment "Call Headset Tx device"
 
 	EnableSequence
@@ -3807,7 +3835,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play Voice Call"
+	Name "Play Voice"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -3998,7 +4026,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoIP"
+	Name "Play VOIP"
 	Comment "Modifier for Voice IP Call"
 
 	EnableSequence
@@ -4018,7 +4046,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoIPBT Headset"
+	Name "Play VOIPBT Headset"
 
 	EnableSequence
 	EndSequence
@@ -4035,7 +4063,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoIPBT Mic"
+	Name "Play VOIPBT Mic"
 
 	EnableSequence
 		'AUX_PCM_RX_Voice Mixer Voip':1:1
@@ -4053,7 +4081,7 @@ EndSection
 
 
 SectionModifier
-	Name "Play VoIPBT Nrec Headset"
+	Name "Play VOIPBT Nrec Headset"
 
 	EnableSequence
 	EndSequence
@@ -4070,7 +4098,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoIPBT Nrec Mic"
+	Name "Play VOIPBT Nrec Mic"
 
 	EnableSequence
 		'AUX_PCM_RX_Voice Mixer Voip':1:1
