@@ -2078,6 +2078,7 @@ SectionDevice
 		'RX5 MIX1 INP2':0:RX2
 		'RX6 DSM MUX':0:DSM_INV
 		'RX5 Digital Volume':2:65.3%
+                'ADC3 Volume':1:90%                                                                                                                          
 	EndSequence
 
 	DisableSequence
