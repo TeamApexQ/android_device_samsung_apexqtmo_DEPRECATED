@@ -1916,7 +1916,7 @@ SectionDevice
 	DisableSequence
 	EndSequence
 
-	ACDBID	0:1
+	ACDBID	18:1
 
 EndSection
 
