@@ -1265,6 +1265,29 @@ SectionDevice
 EndSection
 
 SectionDevice
+	Name "Voice Earpiece"
+	Comment "Handset Rx device"
+
+	EnableSequence
+		'SLIM_0_RX Channels':0:One
+		'RX1 MIX1 INP1':0:RX1
+		'EAR PA Gain':0:POS_2_DB
+		'DAC1 Switch':1:1
+		'RX1 Digital Volume':2:69.3%
+	EndSequence
+
+	DisableSequence
+		'RX1 MIX1 INP1':0:ZERO
+		'DAC1 Switch':1:0
+		'EAR PA Gain':0:ZERO
+		'RX1 Digital Volume':1:0
+	EndSequence
+
+	ACDBID	7:1
+
+EndSection
+
+SectionDevice
 	Name "Voice Earpiece Extra Gain"
 	Comment "Handset Extra Vol Rx device"
 
