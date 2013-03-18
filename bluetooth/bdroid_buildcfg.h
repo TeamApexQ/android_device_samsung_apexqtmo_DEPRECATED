@@ -19,5 +19,7 @@
 #define _BDROID_BUILDCFG_H
 
 #define BTM_DEF_LOCAL_NAME   "Relay"
+#define BTTRC_INCLUDED TRUE
+#define BTTRC_PARSER_INCLUDED TRUE
 
 #endif
