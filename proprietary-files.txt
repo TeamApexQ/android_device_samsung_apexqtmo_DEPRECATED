@@ -140,3 +140,5 @@ etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 # Perf
 lib/libqc-opt.so
 
+# bluetooth
+bin/hci_qcomm_init
