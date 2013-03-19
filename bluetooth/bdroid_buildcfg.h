@@ -21,5 +21,7 @@
 #define BTM_DEF_LOCAL_NAME   "Relay"
 #define BTTRC_INCLUDED TRUE
 #define BTTRC_PARSER_INCLUDED TRUE
+#define BT_TRACE_VERBOSE TRUE
+
 
 #endif
