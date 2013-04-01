@@ -91,8 +91,6 @@ BOARD_HAVE_LOW_LATENCY_AUDIO := false
 # and then we will need to set this to false too:
 TARGET_USES_QCOM_COMPRESSED_AUDIO := false
 
-# don't use qcom display-caf
-TARGET_QCOM_DISPLAY_VARIANT := 
 
 # Wifi
 WIFI_BAND := 802_11_ABG
