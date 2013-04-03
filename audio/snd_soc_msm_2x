@@ -333,27 +333,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IP"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
-	EndSequence
-
-	DisableSequence
-		'LINEOUT2 Volume':1:0
-		'LINEOUT4 Volume':1:0
-		'SLIM_0_RX_Voice Mixer CSVoice':1:0
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 2
-	CapturePCM 2
-
-EndSection
-
-SectionVerb
 	Name "Voice CallBT Headset"
 
 	EnableSequence
@@ -420,6 +399,27 @@ SectionVerb
 	CapturePCM 2
 
 EndSection
+}
+SectionUseCase."Voice Call IP" {
+Comment "Voice Call IP use case"
+SectionVerb
+        Name "Voice Call IP"                            
+
+        EnableSequence                                    
+                'SLIM_0_RX_Voice Mixer Voip':1:1
+                'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
+        EndSequence     
+                                            
+        DisableSequence                         
+                'SLIM_0_RX_Voice Mixer Voip':1:0  
+                'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
+        EndSequence                               
+                       
+        # ALSA PCMs                             
+        PlaybackPCM 3                             
+        CapturePCM 3    
+                                                    
+EndSection     
 }
 SectionUseCase."Video Call" {
 Comment "Video Call use case"
