@@ -20,6 +20,7 @@
 
 #define BTM_DEF_LOCAL_NAME   "Samsung Relay 4G"
 #define BTA_DISABLE_DELAY 1000 /* in milliseconds */
+#define AVRC_INCLUDED               FALSE
 
 
 #endif
