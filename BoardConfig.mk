@@ -38,7 +38,7 @@ TARGET_KERNEL_SOURCE        := kernel/samsung/apexq
 TARGET_KERNEL_CONFIG        := cyanogen_apexq_defconfig
 BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom user_debug=31 zcache
 BOARD_KERNEL_BASE           := 0x80200000
-BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01300000
+BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01500000
 BOARD_KERNEL_PAGESIZE       := 2048
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8260A
@@ -69,9 +69,9 @@ BLUETOOTH_HCI_USE_MCT := true
 TARGET_NO_INITLOGO := true
 
 # HAX
-BOARD_USE_SAMSUNG_SEPARATEDSTREAM := true
-BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true
-TARGET_PROVIDES_LIBAUDIO := true
+BOARD_USE_SAMSUNG_SEPARATEDSTREAM := false
+BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := false
+TARGET_PROVIDES_LIBAUDIO := false
 # do you even build?
 TARGET_QCOM_AUDIO_VARIANT := caf
 # do not use FLUENCE
@@ -89,7 +89,7 @@ BOARD_HAVE_DOCK_USBAUDIO := true
 # but might not be for caf
 BOARD_HAVE_LOW_LATENCY_AUDIO := false
 # and then we will need to set this to false too:
-TARGET_USES_QCOM_COMPRESSED_AUDIO := false
+TARGET_USES_QCOM_COMPRESSED_AUDIO := true
 
 
 # Wifi
@@ -103,8 +103,8 @@ BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_HAVE_SAMSUNG_WIFI :=
 BOARD_HAS_QCOM_WLAN := true
 
-WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/prima_wlan.ko"
-WIFI_DRIVER_MODULE_NAME     := "prima_wlan"
+WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/wlan.ko"
+WIFI_DRIVER_MODULE_NAME     := "wlan"
 WIFI_DRIVER_MODULE_ARG      :=
 WIFI_DRIVER_MODULE_AP_ARG   :=
 WIFI_DRIVER_FW_PATH_PARAM   :=
