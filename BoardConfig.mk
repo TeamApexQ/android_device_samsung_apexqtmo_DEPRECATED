@@ -68,6 +68,9 @@ BLUETOOTH_HCI_USE_MCT := true
 # Disable initlogo, Samsungs framebuffer is weird
 TARGET_NO_INITLOGO := true
 
+# We need this flag to get display-caf to use kernel headers
+TARGET_USES_QCOM_BSP := true
+
 # HAX
 BOARD_USE_SAMSUNG_SEPARATEDSTREAM := true
 BOARD_USES_LIBMEDIA_WITH_AUDIOPARAMETER := true
