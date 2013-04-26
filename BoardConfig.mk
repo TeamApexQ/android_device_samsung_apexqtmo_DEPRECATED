@@ -36,7 +36,7 @@ TARGET_OTA_ASSERT_DEVICE := apexqtmo
 # Kernel
 TARGET_KERNEL_SOURCE        := kernel/samsung/apexq
 TARGET_KERNEL_CONFIG        := cyanogen_apexq_defconfig
-BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom user_debug=31 zcache
+BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom user_debug=31 zcache debug ignore_loglevel log_buf_len=10M print_fatal_signals=1 LOGLEVEL=8 earlyprintk=vga,keep sched_debug
 BOARD_KERNEL_BASE           := 0x80200000
 BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01500000
 BOARD_KERNEL_PAGESIZE       := 2048
