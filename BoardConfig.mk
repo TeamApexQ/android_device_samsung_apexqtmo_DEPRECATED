@@ -28,7 +28,7 @@ USE_CAMERA_STUB := true
 # Temporary GPS fix. Must be called here as it fixes GPS called from
 # MSM8960-common. Works in conjunction with older d2 GPS blob
 
-common_flags += -DSET_PRIVACY
+COMMON_GLOBAL_CFLAGS += -DSET_PRIVACY
 
 # inherit from the proprietary version
 -include vendor/samsung/apexqtmo/BoardConfigVendor.mk
