@@ -118,7 +118,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.svlte1x=true \
     persist.radio.no_wait_for_card=1 \
     keyguard.no_require_sim=true \
-    media.aac_51_output_enabled=true
+    media.aac_51_output_enabled=true \
+    wifi.supplicant_scan_interval = 15
 
 # common msm8960
 $(call inherit-product, device/samsung/msm8960-common/msm8960.mk)
