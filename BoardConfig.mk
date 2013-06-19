@@ -48,12 +48,6 @@ WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/prima_wlan.ko"
 WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/prima_wlan/parameters/fwpath"
 WIFI_DRIVER_MODULE_NAME     := "prima_wlan"
 
-# Workaround for missing symbols in camera
-BOARD_NEEDS_MEMORYHEAPPMEM := true
-
-# We still have the old ION API
-BOARD_HAVE_OLD_ION_API := true
-
 #camera hax
 COMMON_GLOBAL_CFLAGS += -DCONFIG_MSM8960_NO_CANCEL_AUTOFOCUS
 
