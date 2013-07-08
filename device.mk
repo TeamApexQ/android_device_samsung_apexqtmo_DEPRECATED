@@ -21,6 +21,7 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/apexqtmo/overlay
 
 ## blobs
 $(call inherit-product, vendor/samsung/apexqtmo/apexqtmo-vendor.mk)
+VARIENT_REQUIRE_3.0_KERNEL := true
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
