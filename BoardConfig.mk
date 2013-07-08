@@ -43,7 +43,7 @@ TARGET_KERNEL_SOURCE        := kernel/samsung/apexq
 TARGET_KERNEL_CONFIG        := cyanogen_apexq_defconfig
 BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom user_debug=31 zcache
 BOARD_KERNEL_BASE           := 0x80200000
-BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01300000
+BOARD_MKBOOTIMG_ARGS        := --ramdisk_offset 0x01500000
 BOARD_KERNEL_PAGESIZE       := 2048
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8260A
@@ -105,6 +105,3 @@ WIFI_DRIVER_FW_PATH_STA     :=
 WIFI_DRIVER_FW_PATH_AP      :=
 WIFI_DRIVER_FW_PATH_P2P     :=
 
-# Camera
-
-COMMON_GLOBAL_CFLAGS += -DQCOM_BSP_CAMERA_ABI_HACK
