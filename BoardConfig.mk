@@ -39,6 +39,7 @@ TARGET_KERNEL_SOURCE        := kernel/samsung/d2
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
+BLUETOOTH_QCOM_SW := true
 
 # Wifi
 BOARD_WLAN_DEVICE := qcwcn
